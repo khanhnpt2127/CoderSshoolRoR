@@ -1,0 +1,11 @@
+development:
+  adapter: postgresql
+  encoding: unicode
+  database: sampletest
+  pool: 5
+  host: localhost
+  username: postgres
+  password: 123456
+  
+ 
+  

@@ -1,0 +1,2 @@
+module MArticlesHelper
+end

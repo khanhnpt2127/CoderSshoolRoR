@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="dataSourceStorageLocal">
+    <data-source name="Rails blog: development" uuid="9f8ad990-678c-4fe9-a933-d6a882055957">
+      <secret-storage>master_key</secret-storage>
+      <user-name>postgres</user-name>
+      <schema-pattern>sampletest.pg_catalog sampletest.public</schema-pattern>
+      <default-schemas>sampletest.public</default-schemas>
+    </data-source>
+  </component>
+</project>
