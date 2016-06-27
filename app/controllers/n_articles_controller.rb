@@ -5,6 +5,7 @@ class NArticlesController < ApplicationController
   # GET /n_articles.json
   def index
     @n_articles = NArticle.all
+    @markdown = Redcarpet::Markdown.new(Redcarpet::Render::HTML)
   end
 
   # GET /n_articles/1
