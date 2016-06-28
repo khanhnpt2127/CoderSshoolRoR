@@ -64,7 +64,7 @@ class NArticlesController < ApplicationController
 
   private
     # Use callbacks to share common setup or constraints between actions.
-    def set_n_article
+        def set_n_article
       @n_article = NArticle.find(params[:id])
     end
 
