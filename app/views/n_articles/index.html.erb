@@ -1,16 +1,16 @@
 <p id="notice"><%= notice %></p>
 
-
-
-
-
 <div class="container">
 <h1>TK's Blog</h1>
-<h2>My first Rail Application for CoderSchool Prework</h2>
+
+<h3 class="col-md-8">My first Rail Application for CoderSchool Prework</h3>
+<div class="col-md-4">
+  <%= link_to 'New Article', new_n_article_path, class: 'btn btn-success'%>
+</div>
 
 
 <div class="row">
-	<div class="col-sn-8">
+	<div class="col-md-8">
 		 <% @n_articles.each do |n_article| %>
 			<div class="card">
 				<div class="card-block">
@@ -19,14 +19,24 @@
 				</div>
         <div class="card-footer">
           <%= link_to 'Edit', edit_n_article_path(n_article), class: 'btn btn-warning' %>
+          <%= link_to 'Delete', edit_n_article_path(n_article), class: 'btn btn-danger' %>
+
         </div>
 			</div>
 		<% end %>
 	</div>
+  <div class="col-md-4">
+    <div class="card">
+      <img class="card-img-top" src="http://i.imgur.com/T3GOzvo.jpg" alt="Card image cap">
+      <div class="card-block">
+        <h4 class="card-title">TK Nguyen</h4>
+        <p class="card-text">Hello. I'm TK, from VietNam. This is my first blog by Rails. Awesome. Nice to meet all you guy.</p>
+      </div>
+    </div>
+  </div>
 </div>
 
 
 <br>
 
-<%= link_to 'New Article', new_n_article_path %>
 </div>

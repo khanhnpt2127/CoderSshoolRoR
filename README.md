@@ -16,13 +16,13 @@ The following **required** functionality is complete:
 
 * [x] User can create a new post, formatted using the Markdown language.
 * [x] User can edit an existing post.
-* [ ] There is one post that introduces the App Creator with name, picture.
+* [x] There is one post that introduces the App Creator with name, picture.
 * [ ] User can delete stories, with an alert that asks the user to confirm.
 * [ ] User see a search form on the Posts page.
 * [ ] User can submit a search term to find all posts bywith titles containing the search term.
 
 The following **optional** features are implemented:
-* [ ] There is a "navbar" that is responsive to window size similar to http://v4-alpha.getbootstrap.com/examples/navbar/. 
+* [x] There is a "navbar" that is responsive to window size similar to http://v4-alpha.getbootstrap.com/examples/navbar/. 
 * [ ] User can see how many views a post has. 
 * [ ] User can leave a comment on a post.
 * [ ] User can add "tags" to a post, and filter posts by tag. 
@@ -30,15 +30,11 @@ The following **optional** features are implemented:
 The following features are implemented:
 
 - [ ] Sign Up (Subscriber) | Admin Mode
-- [ ] Comment Posts
-
+- [x] Navbar with Reponsive
 ## Video Walkthrough 
 
 Here's a walkthrough of implemented user stories:
 
-> HINT: You can put a `walkthrough.gif` file in your project folder, add to git, and use the following syntax to embed it:  
-> `![Video Walkthrough](walkthrough.gif)` 
-> 
 
 
 ## Notes
