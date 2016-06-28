@@ -1,8 +1,0 @@
-== README
-
-This is my Coderschool prework submission. My first Ruby on Rails Application.
-
-Thanks for checking it!
-
-
-
