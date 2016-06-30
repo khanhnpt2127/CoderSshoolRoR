@@ -1,8 +1,18 @@
 <div class="container">
-<h1>Editing Article</h1>
 
 
-    <%= render 'form' %>
-<%= link_to 'Show', @n_article %> |
-<%= link_to 'Back', n_articles_path %>
+  <div class="card">
+    <div class="card-block">
+      <h3 class="card-title" align="center">Editing Article</h3>
+      <%= render 'form' %>
+    </div>
+    <div class="card-footer">
+      <%= link_to 'Show', @n_article %> |
+      <%= link_to 'Back', n_articles_path %>
+    </div>
+  </div>
+
+
+
+
 </div>

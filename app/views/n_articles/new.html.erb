@@ -1,7 +1,10 @@
 <div class="container">
-<h1>New Article</h1>
-
-  <%= render 'form' %>
-
-<%= link_to 'Back', n_articles_path %>
+  <div class="card">
+    <div class="card-block">
+      <h3 class="card-title" align="center">New Article</h3>
+      <%= render 'form' %>
+    </div>
+    <div class="card-footer">
+      <%= link_to 'Back', n_articles_path %>    </div>
+  </div>
 </div>

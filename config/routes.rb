@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :abouts
   resources :x_articles
   resources :n_articles
   resources :m_articles

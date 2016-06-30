@@ -12,15 +12,15 @@
     </div>
   <% end %>
 
-  <div class="field">
+  <div class="field" style="padding-top: 10px">
     <%= f.label :title %><br>
-    <%= f.text_field :title %>
+    <%= f.text_field :title, class: 'form-control' %>
   </div>
-  <div class="field">
+  <div class="field" style="padding-top: 10px">
     <%= f.label :body %><br>
-    <%= f.text_area :body %>
+    <%= f.text_area :body, class: 'form-control' %>
   </div>
-  <div class="actions">
-    <%= f.submit 'Save' %>
+  <div class="actions" style="padding-top: 10px">
+    <%= f.submit 'Save', class: 'btn btn-primary' %>
   </div>
 <% end %>
