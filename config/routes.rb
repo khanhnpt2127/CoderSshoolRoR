@@ -1,7 +1,9 @@
 Rails.application.routes.draw do
   resources :abouts
   resources :x_articles
-  resources :n_articles
+  resources :n_articles do
+    resources :comments
+  end
   resources :m_articles
   get 'articles/new'
 

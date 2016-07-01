@@ -13,6 +13,19 @@
       <%= @n_article.body %>
     </p>
   </div>
+
+
+  <div id="comment">
+    <h2 class="card-title" align="center"><%= @n_article.comments.count %> comments</h2>
+    <%= render @n_article.comments %>
+  </div>
+
+  <div class="card-block">
+    <h2 class="card-title" align="center">Comment</h2>
+    <%= render "comments/form" %>
+  </div>
+
+
   <div class="card-footer">
     <%= link_to 'Back', n_articles_path %>    </div>
 </div>

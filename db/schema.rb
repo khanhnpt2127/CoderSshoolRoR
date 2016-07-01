@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160630050046) do
+ActiveRecord::Schema.define(version: 20160701042515) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -20,6 +20,16 @@ ActiveRecord::Schema.define(version: 20160630050046) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
+
+  create_table "comments", force: :cascade do |t|
+    t.string   "name"
+    t.text     "body"
+    t.integer  "n_article_id"
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
+  end
+
+  add_index "comments", ["n_article_id"], name: "index_comments_on_n_article_id", using: :btree
 
   create_table "m_articles", force: :cascade do |t|
     t.datetime "created_at", null: false
@@ -33,10 +43,22 @@ ActiveRecord::Schema.define(version: 20160630050046) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "n_comments", force: :cascade do |t|
+    t.string   "name"
+    t.text     "body"
+    t.integer  "n_article_id"
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
+  end
+
+  add_index "n_comments", ["n_article_id"], name: "index_n_comments_on_n_article_id", using: :btree
+
   create_table "x_articles", force: :cascade do |t|
     t.text     "title"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
+  add_foreign_key "comments", "n_articles"
+  add_foreign_key "n_comments", "n_articles"
 end
