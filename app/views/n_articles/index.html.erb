@@ -4,16 +4,24 @@
 <h1>TK's Blog</h1>
 
 <h3>My first Rail Application for CoderSchool Prework</h3>
-<div class="col-md-8" align="right" style="padding-top: 10px; padding-bottom: 10px;">
+
+<div class="col-md-8" style="padding-top: 10px; padding-bottom: 10px">
   <p><strong>Post: </strong><%= @n_articles.count %></p>
   <%= link_to 'New Article', new_n_article_path, class: 'btn btn-success'%>
+  <%= form_tag(@n_article, :method => "get", id: "search-form", class: 'form-inline pull-xs-right') do %>
+      <%= text_field_tag :search, params[:search],class: 'form-control' , placeholder: "Search Posts" %>
+      <%= submit_tag "Search", class: 'btn btn-success' %>
+  <% end %>
+  <br>
+
 </div>
 
 
 <div class="row">
 	<div class="col-md-8">
+    <% if @n_articles.present? %>
 		 <% @n_articles.each do |n_article| %>
-			<div class="card">
+        <div class="card">
 				<div class="card-block">
 					<h4 class="card-title"><%= n_article.title %></h4>
 					<p class="card-text"><%= @markdown.render(n_article.body).html_safe %></p>
@@ -25,7 +33,10 @@
           <!--<button type="button" class="btn btn-danger" data-toggle="modal" data-target="#myModal">Delete</button>-->
         </div>
 			</div>
-		<% end %>
+		  <% end %>
+    <% else %>
+        <p>There are no posts containing the term(s) <%= params[:search] %>.</p>
+  <% end %>
 	</div>
   <div class="col-md-4">
     <div class="card">

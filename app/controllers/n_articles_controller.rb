@@ -5,6 +5,11 @@ class NArticlesController < ApplicationController
   # GET /n_articles.json
   def index
     @n_articles = NArticle.all
+    if params[:search]
+      @n_articles = NArticle.search(params[:search]).order("created_at DESC")
+    else
+      @n_articles = NArticle.all
+    end
     @markdown = Redcarpet::Markdown.new(Redcarpet::Render::HTML)
   end
 
