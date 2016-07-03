@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  devise_for :users
+  devise_for :models
   resources :abouts
   resources :x_articles
   resources :n_articles do
